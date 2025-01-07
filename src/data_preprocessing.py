@@ -55,3 +55,10 @@ def handle_categorical_data(df, one_hot_encode=True):
       df['Type'] = df['Type'].astype('category').cat.codes #encode as numeric data
 
   return df
+
+
+def handle_lagged_features_na(df):
+    """Handles the NaN values introduced when creating lagged features."""
+    lagged_columns = [col for col in df.columns if 'Weekly_Sales_lag_' in col]
+    df[lagged_columns] = df[lagged_columns].fillna(0)
+    return df
