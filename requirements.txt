@@ -1,0 +1,6 @@
+pandas
+statsmodels
+prophet
+scikit-learn
+Flask
+python-dotenv
