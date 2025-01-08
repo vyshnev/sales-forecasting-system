@@ -8,7 +8,8 @@ import numpy as np
 def train_sarima(train_data, order, seasonal_order):
     """Trains a SARIMA model."""
     model = SARIMAX(train_data, order=order, seasonal_order=seasonal_order, 
-                    enforce_stationarity=False, enforce_invertibility=False, low_memory=True)
+                    enforce_stationarity=False, enforce_invertibility=False, low_memory=True,
+                    simple_differencing=True)
     model_fit = model.fit(disp=False, method='lbfgs', maxiter=50)
     return model_fit
 
