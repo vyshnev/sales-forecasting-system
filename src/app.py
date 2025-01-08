@@ -66,7 +66,7 @@ def predict():
 
           return jsonify({
               'prophet_predictions': future_prophet_predictions[['ds', 'original_yhat']].to_dict('records'),
-               'sarima_predictions': future_sarima_predictions.rename(lambda x: x.strftime('%Y-%m-%d')).to_dict()
+              'sarima_predictions': future_sarima_predictions.rename(lambda x: x.strftime('%Y-%m-%d')).to_dict()
             })
     except Exception as e:
         return jsonify({'error': str(e)}), 400
