@@ -52,7 +52,7 @@ This project demonstrates how to build a complete sales forecasting system by:
 * **Matplotlib**: For visualizations
 
 ## Project Structure
-
+```bash
 sales-forecasting-system/
 ├── data/ # CSV, Excel files
 ├── notebooks/ # Exploratory Analysis and Model Development
@@ -68,7 +68,7 @@ sales-forecasting-system/
 ├── Dockerfile # For Dockerization
 ├── docker-compose.yml # For Docker Compose (optional, but good)
 └── README.md # Documentation
-
+```
 ## Setup Instructions
 
 1.  **Clone the Repository:**
